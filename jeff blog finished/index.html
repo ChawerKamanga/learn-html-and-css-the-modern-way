@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jeff Blog</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        header {
+            text-align: center;
+            background-image: url("http://dash.ga.co/assets/jeff-bg.png");
+            background-size: cover;
+            color: white;
+        }
+        a {
+            color: white;
+        }
+        ul {
+            padding: 10px;
+            background-color: #f00;
+        }
+        li {
+            display: inline;
+            padding: 0px 10px 0px 10px;
+        }
+        h1 {
+            font-size: 70px;
+        }
+        img {
+            margin: 40px 0px 0px 0px;
+            border: 7px solid white;
+            border-radius: 20px;
+        }
+        article {
+            max-width: 500px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        #display-likes-1 {
+            color: blue;
+        }
+
+        @media (max-width: 500px) {
+           h1 {
+               font-size: 36px;
+           }
+           li {
+               display: block;
+               padding: 5px;
+           }
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="jeff.png">
+        <h1>Jeff's Blog</h1>
+        <ul>
+            <li> <a href="#">About Me</a>  </li>
+            <li> <a href="#">Poems </a> </li>
+            <li> <a href="#">Worst Poems</a>  </li>
+        </ul>
+    </header>
+    <article>
+        <h2>VHS umami pop-up trust fund</h2>
+        <p>Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan gentrify Echo Park. Street art swag brunch, next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them polaroid hashtag +1, meggings biodiesel Portland High Life cray tumblr retro.</p>
+    <button id="btn-1">Like</button> 
+    <button id="d-btn-1">Dislike</button> 
+    <span id="display-likes-1"></span>
+    </article>
+    <article>
+        <h2>Sartorial synth Echo Park, roof party</h2>
+        <p>chambray you probably haven't heard of them pour-over viral selvage umami skateboard VHS post-ironic selfies. Wes Anderson gentrify fanny pack twee, bicycle rights bitters blog keffiyeh plaid flannel. Tonx irony cliche sustainable mlkshk bitters. Four loko leggings chambray Vice.</p>
+    <button id="btn-2">Like</button>
+    </article>
+    <article>
+        <h2>Forage food truck keytar master cleanse</h2>
+        <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic tacky sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>
+    <button id="btn-3">Like</button>
+    </article>
+    
+    <script>
+        // like buttons
+        const btn1 = document.getElementById('btn-1')
+        const btn2 = document.getElementById('btn-2')
+        const btn3 = document.getElementById('btn-3')
+        const like1 = document.getElementById('display-likes-1')
+
+        // dislike buttons
+        const dislikeButton1 = document.getElementById('d-btn-1')
+
+        btn1.addEventListener("click", addLike);
+
+        dislikeButton1.addEventListener('click', removeLike)
+        
+        function addLike(likeSpan) {
+            like1.innerText = 1
+        } 
+
+        function removeLike() {
+            like1.innerText = 0
+        }
+    </script>
+
+</body>
+</html>
