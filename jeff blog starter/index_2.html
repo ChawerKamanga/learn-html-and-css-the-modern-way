@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript</title>
+</head>
+<body>
+
+    <p id="my-text">This is my text</p>
+
+    <button onclick="makeBig()">Make text big</button>
+    <button onclick="makeBigger()">Make text biggger</button>
+    <button onclick="makeNormal()">Make text normal</button>
+
+
+    <script>
+       function makeBig() {
+           const paragraph = document.getElementById('my-text')
+           paragraph.style.fontSize = '35px'
+       }
+
+       function makeBigger(){
+         const paragraph = document.getElementById('my-text')
+           paragraph.style.fontSize = '50px'
+       }
+
+       function makeNormal(){
+         const paragraph = document.getElementById('my-text')
+           paragraph.style.fontSize = '16px'
+       }
+       
+    </script>
+</body>
+</html>
